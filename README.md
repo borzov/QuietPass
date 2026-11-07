@@ -2,6 +2,8 @@
 
 Генератор случайных паролей для Safari на macOS 15 и новее. Приложение macOS устанавливает расширение; генерация, конфигуратор и история находятся в его окне в Safari.
 
+[Поддержка](https://borzov.github.io/QuietPass/ru/support.html) · [Конфиденциальность](https://borzov.github.io/QuietPass/ru/privacy.html) · [English](https://borzov.github.io/QuietPass/)
+
 ## Использование
 
 1. Откройте QuietPass.app.
@@ -101,9 +103,9 @@ swift scripts/generate-icons.swift
 
 Согласованные параметры первой публикации: версия 1.0.0, бесплатное скачивание, страны — Россия (`RUS`), США (`USA`), Великобритания (`GBR`), Китай (`CHN`), Германия (`DEU`), Франция (`FRA`) и Испания (`ESP`). Эти настройки ещё не применены в App Store Connect.
 
-Для размещения на GitHub Pages загрузите проект в выбранный репозиторий, в Settings → Pages выберите Source → GitHub Actions, затем запустите workflow «Publish QuietPass support pages» через Actions → Run workflow. Workflow публикует только каталог `website/` и запускается вручную. [Инструкция GitHub](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+Репозиторий проекта: [borzov/QuietPass](https://github.com/borzov/QuietPass). Страницы размещены на [GitHub Pages](https://borzov.github.io/QuietPass/). Для обновления сайта запустите workflow «Publish QuietPass support pages» через Actions → Run workflow на ветке `main`. Workflow публикует только каталог `website/` и запускается вручную. В Settings → Pages источником должен быть GitHub Actions. [Инструкция GitHub](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
-После успешной публикации используйте адреса `<адрес сайта>/en/privacy.html` и `<адрес сайта>/en/support.html` в App Store Connect. Для других локализаций доступны каталоги `ru`, `zh-Hans`, `de`, `fr` и `es`. Ссылки в интерфейсе расширения следует добавить после получения и проверки действующих публичных URL.
+Основные ссылки для App Store Connect: [Privacy Policy](https://borzov.github.io/QuietPass/en/privacy.html) и [Support](https://borzov.github.io/QuietPass/en/support.html). Для других локализаций доступны каталоги `ru`, `zh-Hans`, `de`, `fr` и `es`. Добавление этих ссылок в интерфейс расширения входит в дальнейшую подготовку магазинной сборки.
 
 Локальный просмотр:
 
