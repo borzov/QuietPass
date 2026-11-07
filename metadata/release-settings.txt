@@ -1,0 +1,22 @@
+Product: QuietPass
+Platform: MAC_OS
+Public version: 1.0.0
+Candidate build: 4
+Bundle ID: com.borzov.QuietPass
+Extension bundle ID: com.borzov.QuietPass.Extension
+Proposed SKU: quietpass-macos
+Primary locale: en-US
+Price: 0 (free download)
+Requested territories: RUS, USA, GBR, CHN, DEU, FRA, ESP
+Primary category: Utilities
+Support email: max.borzov@me.com
+Release preference: manual release after review approval
+
+Prepared app-info locales: en-US, ru, zh-Hans, de-DE, fr-FR, es-ES
+Prepared version locales: en-US, ru, zh-Hans, de-DE, fr-FR, es-ES
+Local canonical validation: asc metadata validate --dir metadata --output table
+
+Privacy declaration candidate: Data Not Collected (on-device generation and history; no analytics or tracking SDKs). Support email correspondence and GitHub Pages hosting are separately explained in the public policy.
+Encryption declaration: only Apple OS/WebKit cryptographic facilities are used. No custom encryption implementation or third-party cryptographic library. ITSAppUsesNonExemptEncryption=false in both targets; confirm against the final binary and App Store Connect questionnaire.
+
+Age rating, seller/trader details, review contact telephone, final screenshots and distribution upload must be completed in App Store Connect. Do not invent missing identity/contact information. No App Store submission or public release is authorized by preparing these files alone.

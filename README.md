@@ -95,7 +95,7 @@ swift scripts/generate-icons.swift
 
 ## Статус первой версии
 
-Это локальная сборка для проверки. Подготовка карточки App Store, финальная проверка доступности с VoiceOver, расширенная проверка на сторонних сайтах, архивирование и отправка на ревью выполняются перед публикацией отдельно. Приложение не публиковалось.
+Подготовлен кандидат 1.0.0, сборка 4: оригинальная иконка приложения, ссылки на политику и поддержку, privacy manifest, универсальный архив macOS и подписанный пакет для Mac App Store. Карточка магазина, скриншоты, финальная проверка доступности и проверка магазинной установки входят в подготовку к отправке. В App Store приложение пока не опубликовано.
 
 ## Страницы для App Store
 
@@ -105,7 +105,7 @@ swift scripts/generate-icons.swift
 
 Репозиторий проекта: [borzov/QuietPass](https://github.com/borzov/QuietPass). Страницы размещены на [GitHub Pages](https://borzov.github.io/QuietPass/). Для обновления сайта запустите workflow «Publish QuietPass support pages» через Actions → Run workflow на ветке `main`. Workflow публикует только каталог `website/` и запускается вручную. В Settings → Pages источником должен быть GitHub Actions. [Инструкция GitHub](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
-Основные ссылки для App Store Connect: [Privacy Policy](https://borzov.github.io/QuietPass/en/privacy.html) и [Support](https://borzov.github.io/QuietPass/en/support.html). Для других локализаций доступны каталоги `ru`, `zh-Hans`, `de`, `fr` и `es`. Добавление этих ссылок в интерфейс расширения входит в дальнейшую подготовку магазинной сборки.
+Основные ссылки для App Store Connect: [Privacy Policy](https://borzov.github.io/QuietPass/en/privacy.html) и [Support](https://borzov.github.io/QuietPass/en/support.html). Для других локализаций доступны каталоги `ru`, `zh-Hans`, `de`, `fr` и `es`. Ссылки доступны в настройках расширения и служебном окне приложения. [Демонстрационная страница вставки](https://borzov.github.io/QuietPass/test.html) не имеет скриптов или отправки форм.
 
 Локальный просмотр:
 
@@ -114,3 +114,13 @@ python3 -m http.server 65145 --bind 127.0.0.1 --directory website
 ```
 
 Откройте `http://127.0.0.1:65145/`. Тексты политики описывают приложение, обращения по email и размещение сайта на GitHub Pages отдельно. Перед публикацией сверяйте их с фактической сборкой и практикой работы с обращениями.
+
+## Материалы карточки магазина
+
+В `metadata/app-info/` находятся название, подзаголовок и ссылка на политику для шести локализаций. В `metadata/version/1.0.0/` — описания, ключевые слова и ссылки поддержки. `metadata/review-notes.txt` содержит сценарий проверки для App Review, а `metadata/release-settings.txt` — согласованные параметры выпуска и оставшиеся поля аккаунта. Файлы используют канонический формат `asc metadata`.
+
+```sh
+asc metadata validate --dir metadata --check-urls --output table
+```
+
+Privacy manifest описывает отсутствие сбора/отслеживания и использование `UserDefaults` для собственных настроек (`CA92.1`). Декларация шифрования основана на использовании только механизмов Apple OS/WebKit: [пояснения Apple](https://developer.apple.com/help/app-store-connect/reference/app-information/export-compliance-documentation-for-encryption/). Секреты подписи, ключи, профили, архивы и установочные пакеты в публичный репозиторий не включаются.

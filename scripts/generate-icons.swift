@@ -12,21 +12,27 @@ func png(size: Int, toolbar: Bool = false) -> Data {
             let inset = rect.insetBy(dx: rect.width * 0.05, dy: rect.height * 0.05)
             let shape = NSBezierPath(roundedRect: inset, xRadius: rect.width * 0.2, yRadius: rect.height * 0.2)
             NSGradient(starting: NSColor(red: 0.12, green: 0.53, blue: 0.62, alpha: 1), ending: NSColor(red: 0.08, green: 0.34, blue: 0.49, alpha: 1))!.draw(in: shape, angle: -90)
+            // Original geometric Q monogram; app artwork does not use SF Symbols.
+            let monogram = NSBezierPath(roundedRect: NSRect(x: rect.width * 0.23, y: rect.height * 0.25, width: rect.width * 0.54, height: rect.height * 0.57), xRadius: rect.width * 0.17, yRadius: rect.height * 0.17)
+            monogram.append(NSBezierPath(roundedRect: NSRect(x: rect.width * 0.35, y: rect.height * 0.37, width: rect.width * 0.30, height: rect.height * 0.33), xRadius: rect.width * 0.065, yRadius: rect.height * 0.065))
+            monogram.windingRule = .evenOdd
+            NSColor.white.setFill()
+            monogram.fill()
+            let tail = NSBezierPath()
+            tail.move(to: NSPoint(x: rect.width * 0.53, y: rect.height * 0.43))
+            tail.line(to: NSPoint(x: rect.width * 0.75, y: rect.height * 0.23))
+            tail.lineWidth = rect.width * 0.115
+            tail.lineCapStyle = .round
+            NSColor.white.setStroke()
+            tail.stroke()
+            return true
         }
-        let color: NSColor = toolbar ? .black : .white
-        let configuration = NSImage.SymbolConfiguration(pointSize: rect.width * (toolbar ? 0.7 : 0.47), weight: toolbar ? .regular : .medium)
-            .applying(NSImage.SymbolConfiguration(paletteColors: [color]))
-        let symbol = NSImage(systemSymbolName: toolbar ? "key.horizontal" : "key.fill", accessibilityDescription: nil)!.withSymbolConfiguration(configuration)!
-        let width: CGFloat
-        let height: CGFloat
-        if toolbar {
-            let scale = min(rect.width * 0.76 / symbol.size.width, rect.height * 0.76 / symbol.size.height)
-            width = symbol.size.width * scale
-            height = symbol.size.height * scale
-        } else {
-            width = rect.width * 0.56
-            height = width * symbol.size.height / symbol.size.width
-        }
+        let configuration = NSImage.SymbolConfiguration(pointSize: rect.width * 0.7, weight: .regular)
+            .applying(NSImage.SymbolConfiguration(paletteColors: [.black]))
+        let symbol = NSImage(systemSymbolName: "key.horizontal", accessibilityDescription: nil)!.withSymbolConfiguration(configuration)!
+        let scale = min(rect.width * 0.76 / symbol.size.width, rect.height * 0.76 / symbol.size.height)
+        let width = symbol.size.width * scale
+        let height = symbol.size.height * scale
         symbol.draw(in: NSRect(x: (rect.width - width) / 2, y: (rect.height - height) / 2, width: width, height: height))
         return true
     }

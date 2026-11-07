@@ -274,5 +274,14 @@
   },
   "error_generic": {
     "message": "无法完成操作，请重试。"
+  },
+  "privacyPolicy": {
+    "message": "隐私政策"
+  },
+  "support": {
+    "message": "支持"
+  },
+  "openLinkFailed": {
+    "message": "无法打开页面，请重试。"
   }
 }

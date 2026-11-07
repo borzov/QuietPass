@@ -10,7 +10,7 @@ settings:
     CODE_SIGN_STYLE: Automatic
     CODE_SIGN_IDENTITY: Apple Development
     MARKETING_VERSION: 1.0.0
-    CURRENT_PROJECT_VERSION: 3
+    CURRENT_PROJECT_VERSION: 4
     ENABLE_HARDENED_RUNTIME: YES
     COMBINE_HIDPI_IMAGES: YES
 targets:
@@ -35,6 +35,7 @@ targets:
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         CFBundleDevelopmentRegion: en
         LSUIElement: true
+        ITSAppUsesNonExemptEncryption: false
         LSApplicationCategoryType: public.app-category.utilities
         NSHumanReadableCopyright: Copyright © 2026 Maksim Borzov
     dependencies:
@@ -69,6 +70,7 @@ targets:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         CFBundleDevelopmentRegion: en
+        ITSAppUsesNonExemptEncryption: false
         NSExtension:
           NSExtensionPointIdentifier: com.apple.Safari.web-extension
           NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).NativeHandler

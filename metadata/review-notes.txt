@@ -1,0 +1,23 @@
+QuietPass 1.0.0 — macOS Safari Web Extension
+
+No account, login, purchase or subscription is required.
+Requires macOS 15 or later and Safari 18 or later.
+
+1. Open QuietPass and choose Open Safari Settings. Enable QuietPass under Safari Extensions. The containing app exits after opening settings; the extension works without a resident containing app.
+2. Click the horizontal key icon in Safari. The popup generates one main password and five independent alternatives. Length, complexity, special characters and hyphens are configurable and saved automatically. Hyphens split a password into three balanced groups and count toward its total length.
+3. To test insertion, open https://borzov.github.io/QuietPass/test.html and select either demonstration field. Open QuietPass and choose Insert. Grant access to that page if Safari asks. The page has no sign-in, form submission or scripts. QuietPass does not submit forms.
+4. After successful insertion and history handling, the popup closes. Successfully copied or inserted passwords are stored locally in the macOS Keychain, separately for each Safari profile. Open History or Settings to inspect records and choose retention. Expired records are removed on the next access; opening the generator alone does not access history.
+5. In private windows, generation and copying are available; history and insertion are disabled.
+6. Privacy Policy and Support links are available in extension Settings and the containing app.
+
+Permissions:
+- activeTab and scripting support explicit insertion into the selected editable field.
+- clipboardWrite supports copying the selected password.
+- storage stores generation preferences; password history is not stored in browser.storage.local.
+- nativeMessaging accesses the local Keychain history handler.
+
+QuietPass has no server, tracking SDK, advertising, account system or authenticator/TOTP features. History is not synchronized with iCloud.
+
+Support: max.borzov@me.com
+Privacy: https://borzov.github.io/QuietPass/en/privacy.html
+Support page: https://borzov.github.io/QuietPass/en/support.html

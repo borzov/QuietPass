@@ -1,6 +1,6 @@
 import { DEFAULT_OPTIONS, validateOptions, generateBatch } from './generator.js';
 import { historyRequest, errorMessage } from './native.js';
-import { t, uiLanguage } from './i18n.js';
+import { t, uiLanguage, websiteURL } from './i18n.js';
 
 const paths={key:'<circle cx="8" cy="8" r="4"/><path d="m11 11 9 9m-4-4 2-2m-5-1 2-2"/>',copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/>',refresh:'<path d="M20 7v5h-5M4 17v-5h5"/><path d="M6 6a8 8 0 0 1 13 3M5 15a8 8 0 0 0 13 3"/>',history:'<path d="M3 4v5h5"/><path d="M4 8a9 9 0 1 1 0 8M12 7v5l3 2"/>',settings:'<path d="M4 6h16M4 12h16M4 18h16"/><path d="M8 3v6m8 0v6m-6 0v6"/>',insert:'<rect x="4" y="14" width="16" height="7" rx="2"/><path d="M12 3v12m-4-4 4 4 4-4"/>',back:'<path d="m14 5-7 7 7 7"/>'};
 const icon=name=>`<svg viewBox="0 0 24 24" aria-hidden="true">${paths[name]}</svg>`;
@@ -70,7 +70,8 @@ function history() {
 function settings() {
   return `<section class="secondary"><h1 class="view-title" tabindex="-1">${tx('settingsTitle')}</h1><p class="note">${tx('settingsDescription')}</p>
     <div class="settings-group row"><label for="retention">${tx('retentionLabel')}</label><select id="retention">${[0,1,7,30,90].map(value=>`<option value="${value}"${state.retentionDays===value?' selected':''}>${escapeHTML(value===0?t('retentionOff'):daysLabel(value))}</option>`).join('')}</select></div>
-    <p class="note">${tx('retentionExplanation')}</p><p class="note">${tx('privacyExplanation')}</p><p class="note">${tx('hyphenExplanation')}</p></section>`;
+    <p class="note">${tx('retentionExplanation')}</p><p class="note">${tx('privacyExplanation')}</p><p class="note">${tx('hyphenExplanation')}</p>
+    <nav class="legal-links"><a href="${websiteURL('privacy')}" data-action="privacy" target="_blank" rel="noopener noreferrer">${tx('privacyPolicy')}</a><a href="${websiteURL('support')}" data-action="support" target="_blank" rel="noopener noreferrer">${tx('support')}</a></nav></section>`;
 }
 function confirmation() {
   const off=state.confirmation==='off';
@@ -86,6 +87,10 @@ async function record(password,kind,successMessage) {
   catch { notice(t('copyHistoryFailed')); }
 }
 async function act(action,index) {
+  if(action==='privacy'||action==='support'){
+    try{await browser.tabs.create({url:websiteURL(action)});window.close();}catch{notice(t('openLinkFailed'));}
+    return;
+  }
   if(action==='refresh'){state.passwords[0]=generateBatch(state.options,1,state.passwords)[0];syncPasswords();notice(t('newPasswordReady'));return;}
   if(action==='alternatives'){state.passwords=[state.passwords[0],...generateBatch(state.options,5,state.passwords)];syncPasswords();notice(t('alternativesReady'));return;}
   if(action==='copy'||action==='history-copy'){
@@ -122,7 +127,9 @@ async function act(action,index) {
 
 document.addEventListener('click',async event=>{
   const element=event.target.closest('[data-action]');
-  if(!element||state.busy)return;
+  if(!element)return;
+  event.preventDefault();
+  if(state.busy)return;
   busy(true);
   try{await act(element.dataset.action,Number(element.dataset.index||0));}catch(error){notice(error.message);}finally{busy(false);}
 });

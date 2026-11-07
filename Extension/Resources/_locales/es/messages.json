@@ -274,5 +274,14 @@
   },
   "error_generic": {
     "message": "No se pudo completar la acción. Inténtalo de nuevo."
+  },
+  "privacyPolicy": {
+    "message": "Privacidad"
+  },
+  "support": {
+    "message": "Soporte"
+  },
+  "openLinkFailed": {
+    "message": "No se pudo abrir la página. Inténtalo de nuevo."
   }
 }

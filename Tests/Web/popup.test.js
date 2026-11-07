@@ -13,13 +13,14 @@ const nativeScript=fs.readFileSync(new URL('../../Extension/Resources/native.js'
 const tick=()=>new Promise(resolve=>setImmediate(resolve));
 async function setup({clipboardFails=false,recordFails=false,insertionResult={ok:false,error:'noField'},locale='ru'}={}){
   const dom=new JSDOM(html,{url:'https://quietpass.test/popup.html',runScripts:'outside-only'});
-  const {window}=dom,records=[],requests=[],copied=[],preferences={};
+  const {window}=dom,records=[],requests=[],copied=[],preferences={},openedTabs=[];
   let days=7,closeCalls=0;
   const dispose=window.close.bind(window);
   window.close=()=>{closeCalls++};
   window.DEFAULT_OPTIONS=DEFAULT_OPTIONS;window.validateOptions=validateOptions;window.generateBatch=generateBatch;
   window.browser={storage:{local:{async get(){return {}},async set(value){Object.assign(preferences,value)}},session:{async get(){return {}},async set(){}}},runtime:{async sendMessage(message){requests.push(message);return typeof insertionResult==='function'?insertionResult():insertionResult}}};
   window.browser.i18n=mockI18n(locale);
+  window.browser.tabs={async create(tab){openedTabs.push(tab);return {id:1}}};
   vm.runInContext(localizationScript+nativeScript,dom.getInternalVMContext());
   Object.defineProperty(window.navigator,'clipboard',{value:{async writeText(password){if(clipboardFails)throw new Error('denied');copied.push(password)}}});
   window.historyRequest=async(action,values={})=>{
@@ -34,7 +35,7 @@ async function setup({clipboardFails=false,recordFails=false,insertionResult={ok
   };
   vm.runInContext(script,dom.getInternalVMContext());await tick();
   const click=async selector=>{window.document.querySelector(selector).click();await tick()};
-  return {dom,document:window.document,window,records,requests,copied,preferences,click,dispose,closeCalls:()=>closeCalls};
+  return {dom,document:window.document,window,records,requests,copied,preferences,openedTabs,click,dispose,closeCalls:()=>closeCalls};
 }
 
 test('popup renders six unique passwords; length changes preserve focus and only settings are persisted',async()=>{
@@ -84,6 +85,15 @@ for(const locale of locales){
     assert.equal(ui.document.querySelector('h1').textContent,message('settingsTitle'));
     assert.equal(ui.document.querySelector('label[for="retention"]').textContent,message('retentionLabel'));
     if(locale!=='ru')assert.doesNotMatch(ui.document.body.textContent,/[А-Яа-яЁё]/);
+    const websiteLocale=locale==='zh_CN'?'zh-Hans':locale;
+    for(const page of ['privacy','support']){
+      const link=ui.document.querySelector(`a[data-action="${page}"]`);
+      const url=`https://borzov.github.io/QuietPass/${websiteLocale}/${page}.html`;
+      assert.equal(link?.href,url);
+      await ui.click(`a[data-action="${page}"]`);
+      assert.equal(ui.openedTabs.at(-1).url,url);
+    }
+    assert.equal(ui.records.length,1);
     ui.dispose();
   });
 }

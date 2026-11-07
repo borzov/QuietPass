@@ -42,6 +42,11 @@ struct ContentView: View {
                 .font(.footnote).foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
+            HStack(spacing: 18) {
+                Link("links.privacy", destination: websiteURL("privacy"))
+                Link("links.support", destination: websiteURL("support"))
+            }
+            .font(.footnote)
         }
         .padding(32)
         .frame(width: 480)
@@ -53,5 +58,11 @@ struct ContentView: View {
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionIdentifier) { state, _ in
             DispatchQueue.main.async { enabled = state?.isEnabled }
         }
+    }
+
+    private func websiteURL(_ page: String) -> URL {
+        let language = Bundle.main.preferredLocalizations.first ?? "en"
+        let locale = ["en", "ru", "zh-Hans", "de", "fr", "es"].contains(language) ? language : "en"
+        return URL(string: "https://borzov.github.io/QuietPass/\(locale)/\(page).html")!
     }
 }

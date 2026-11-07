@@ -274,5 +274,14 @@
   },
   "error_generic": {
     "message": "Die Aktion konnte nicht ausgeführt werden. Versuchen Sie es erneut."
+  },
+  "privacyPolicy": {
+    "message": "Datenschutz"
+  },
+  "support": {
+    "message": "Support"
+  },
+  "openLinkFailed": {
+    "message": "Die Seite konnte nicht geöffnet werden. Versuchen Sie es erneut."
   }
 }

@@ -274,5 +274,14 @@
   },
   "error_generic": {
     "message": "Impossible d’effectuer l’action. Réessayez."
+  },
+  "privacyPolicy": {
+    "message": "Confidentialité"
+  },
+  "support": {
+    "message": "Assistance"
+  },
+  "openLinkFailed": {
+    "message": "Impossible d’ouvrir la page. Réessayez."
   }
 }
