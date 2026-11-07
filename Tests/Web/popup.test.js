@@ -53,6 +53,18 @@ test('popup renders six unique passwords; length changes preserve focus and only
   ui.dispose();
 });
 
+test('opening the generator does not wake native history; history loads when requested',async()=>{
+  const ui=await setup();
+  assert.equal(ui.document.querySelector('#main-password').textContent.length,20);
+  assert.equal(ui.document.querySelectorAll('.alternative').length,5);
+  assert.equal(ui.requests.length,0);
+  assert.equal(ui.document.querySelector('#retention-info').textContent,'');
+  await ui.click('[data-action="history"]');
+  assert.equal(ui.requests.filter(request=>request.action==='list').length,1);
+  assert.match(ui.document.querySelector('#retention-info').textContent,/7 дней/);
+  ui.dispose();
+});
+
 for(const locale of locales){
   test(`generator, history, settings and confirmation are localized in ${locale}`,async()=>{
     const ui=await setup({locale});

@@ -30,7 +30,7 @@ function applyHistory(response) {
 }
 function updateFooter() {
   const element=document.getElementById('retention-info');
-  if(element)element.textContent=state.historyAvailable?t('historyFooter',[daysLabel(state.retentionDays)]):t('historyUnavailableFooter');
+  if(element)element.textContent=state.historyAvailable?t('historyFooter',[daysLabel(state.retentionDays)]):'';
 }
 function syncPasswords() {
   document.getElementById('main-password').textContent=state.passwords[0];
@@ -154,7 +154,6 @@ async function initialize(){
   let storageFailed=false;
   try{const saved=await browser.storage.local.get('options');if(saved.options){try{state.options=validateOptions(saved.options);}catch{/* Use safe defaults for obsolete settings. */}}}catch{storageFailed=true;}
   state.passwords=generateBatch(state.options);render();
-  try{applyHistory(await historyRequest('list'));if(storageFailed)notice(t('preferencesLoadFailed'));}
-  catch(error){notice(error.message);}
+  if(storageFailed)notice(t('preferencesLoadFailed'));
 }
 initialize().catch(()=>{document.getElementById('app').textContent=t('startupError');});

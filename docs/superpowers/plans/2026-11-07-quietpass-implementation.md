@@ -58,7 +58,7 @@ for (const password of passwords) {
 ## Task 4 — Popup and preferences
 
 - [ ] Create popup from approved A: 360 px, standard controls, transparent framed parameters, main password and 5 rows, separate refresh controls, labelled history/settings navigation.
-- [ ] Store only validated options in `browser.storage.local`. Load options before first generation; preserve state across internal navigation. Native history is read on open to perform expiry.
+- [ ] Store only validated options in `browser.storage.local`. Load options before first generation; preserve state across internal navigation. Native history is read on history/settings access or after a successful copy/insertion, with expiry handled on access. Opening the generator does not wake the native handler.
 - [ ] Wire clipboard and insertion. Record only after successful action, report storage failures separately and never replay the action. History-copy does not record again.
 - [ ] Add retention selection and in-window confirmation for clearing/turning off history. Block duplicate actions while requests are pending. Handle missing native host with a readable status and preserve usable generation/copying.
 - [ ] Verify theme adaptation, 64-character wrapping, keyboard focus, numeric input validation and actual native errors.

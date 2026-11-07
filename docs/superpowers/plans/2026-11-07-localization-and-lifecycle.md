@@ -15,7 +15,7 @@ The user requested these four concrete changes after testing version 1.0.0. Work
 - `Extension/Resources/popup.js`, `popup.html`, `native.js`, `generator.js`, `field.js`, `manifest.json`: translated UI/metadata/errors and close behavior; business logic returns error codes.
 - `Shared/Localizable.xcstrings`, `App/ContentView.swift`, `App/QuietPassApp.swift`, `Native/KeychainHistoryRepository.swift`: native strings and helper lifecycle.
 - `scripts/generate-icons.swift`, `Extension/Resources/images/toolbar-*.png`: toolbar sizing only; preserve app artwork.
-- `project.yml`: helper flag, English development region, folder-preserved `_locales`, shared native catalog, version 1.1.0/build 2.
+- `project.yml`: helper flag, English development region, folder-preserved `_locales`, shared native catalog. Public version stays 1.0.0 at the user's request; build 3 includes the startup improvement.
 - `Tests/Web/popup.test.js`, `i18n.test.js`, `i18n-mock.js`, `Tests/Icons/validate-icons.swift`: close timing, error behavior, six-language rendering, placeholder parity and glyph padding.
 - `README.md`: helper lifecycle, supported locales and adding another language.
 
