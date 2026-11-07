@@ -4,7 +4,8 @@ Public version: 1.0.0
 Candidate build: 4
 Bundle ID: com.borzov.QuietPass
 Extension bundle ID: com.borzov.QuietPass.Extension
-Proposed SKU: quietpass-macos
+App Store Connect app ID: 6832076733
+SKU: quietpass-macos
 Primary locale: en-US
 Price: 0 (free download)
 Requested territories: RUS, USA, GBR, CHN, DEU, FRA, ESP
@@ -16,7 +17,15 @@ Prepared app-info locales: en-US, ru, zh-Hans, de-DE, fr-FR, es-ES
 Prepared version locales: en-US, ru, zh-Hans, de-DE, fr-FR, es-ES
 Local canonical validation: asc metadata validate --dir metadata --output table
 
-Privacy declaration candidate: Data Not Collected (on-device generation and history; no analytics or tracking SDKs). Support email correspondence and GitHub Pages hosting are separately explained in the public policy.
+Privacy declaration: Data Not Collected, saved and published in App Store Connect with the account holder's confirmation (on-device generation and history; no analytics or tracking SDKs). Support email correspondence and GitHub Pages hosting are separately explained in the public policy.
 Encryption declaration: only Apple OS/WebKit cryptographic facilities are used. No custom encryption implementation or third-party cryptographic library. ITSAppUsesNonExemptEncryption=false in both targets; confirm against the final binary and App Store Connect questionnaire.
 
-Age rating, seller/trader details, review contact telephone, final screenshots and distribution upload must be completed in App Store Connect. Do not invent missing identity/contact information. No App Store submission or public release is authorized by preparing these files alone.
+Calculated age rating: 4+ (questionnaire completed; no content/features requiring a higher rating).
+Distribution upload: build 4 processed by Apple and attached to version 1.0.0.
+Review contact: completed directly in App Store Connect; private telephone is not stored here.
+Screenshot assets: metadata/screenshots/<locale>/, three opaque 2880x1800 PNGs per locale.
+Screenshot upload: all six locales verified with three processed images each.
+DSA status: non-trader, selected by the account holder and saved; App Store Connect reports compliance requirements satisfied.
+
+Readback verification: all six version locales match canonical promotional text, description, keywords and support URLs; each has build 1.0.0 (4), three screenshots and manual release. All six app-info subtitles verified after saving.
+Remaining: control installation through TestFlight, then final owner review and explicit authorization before App Review submission. Do not invent missing identity/contact information. No App Store submission or public release is authorized by preparing these files alone.
