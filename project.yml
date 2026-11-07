@@ -1,0 +1,77 @@
+name: QuietPass
+options:
+  bundleIdPrefix: com.borzov
+  deploymentTarget:
+    macOS: '15.0'
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    DEVELOPMENT_TEAM: 4C524G83X7
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: Apple Development
+    MARKETING_VERSION: 1.0.0
+    CURRENT_PROJECT_VERSION: 1
+    ENABLE_HARDENED_RUNTIME: YES
+    COMBINE_HIDPI_IMAGES: YES
+targets:
+  QuietPass:
+    type: application
+    platform: macOS
+    sources: [App]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.borzov.QuietPass
+        CODE_SIGN_ENTITLEMENTS: App/QuietPass.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: QuietPass
+        CFBundleName: QuietPass
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleDevelopmentRegion: ru
+        LSApplicationCategoryType: public.app-category.utilities
+        NSHumanReadableCopyright: Copyright © 2026 Maksim Borzov
+    dependencies:
+      - target: QuietPassExtension
+        embed: true
+      - sdk: SafariServices.framework
+  QuietPassExtension:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: Native
+      - path: Extension/Resources
+        excludes: [images]
+        buildPhase: resources
+      - path: Extension/Resources/images
+        type: folder
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.borzov.QuietPass.Extension
+        CODE_SIGN_ENTITLEMENTS: Extension/QuietPassExtension.entitlements
+        SKIP_INSTALL: YES
+    info:
+      path: Extension/Info.plist
+      properties:
+        CFBundleDisplayName: QuietPass
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleDevelopmentRegion: ru
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.Safari.web-extension
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).NativeHandler
+    dependencies:
+      - sdk: SafariServices.framework
+      - sdk: Security.framework
+schemes:
+  QuietPass:
+    build:
+      targets:
+        QuietPass: all
+    run:
+      config: Debug
+    archive:
+      config: Release
