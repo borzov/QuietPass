@@ -1,0 +1,278 @@
+{
+  "extensionName": {
+    "message": "QuietPass"
+  },
+  "extensionDescription": {
+    "message": "Mots de passe aléatoires, insertion dans les champs et historique local sécurisé."
+  },
+  "loading": {
+    "message": "Génération des mots de passe…"
+  },
+  "startupError": {
+    "message": "Impossible de démarrer le générateur. Fermez puis rouvrez QuietPass."
+  },
+  "openHistory": {
+    "message": "Ouvrir l’historique"
+  },
+  "openSettings": {
+    "message": "Ouvrir les réglages"
+  },
+  "backToGenerator": {
+    "message": "Revenir au générateur"
+  },
+  "newPassword": {
+    "message": "Nouveau mot de passe"
+  },
+  "newPasswordCaption": {
+    "message": "Nouveau mot de passe · $LENGTH$ caractères",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
+  "generateNewPassword": {
+    "message": "Générer un nouveau mot de passe"
+  },
+  "copyPassword": {
+    "message": "Copier"
+  },
+  "insertPassword": {
+    "message": "Insérer"
+  },
+  "passwordOptions": {
+    "message": "Options du mot de passe"
+  },
+  "lengthLabel": {
+    "message": "Longueur du mot de passe"
+  },
+  "lengthAccessible": {
+    "message": "Nombre de caractères"
+  },
+  "complexityLabel": {
+    "message": "Complexité"
+  },
+  "complexity_simple": {
+    "message": "Simple"
+  },
+  "complexity_standard": {
+    "message": "Standard"
+  },
+  "complexity_complex": {
+    "message": "Complexe"
+  },
+  "specialCharacters": {
+    "message": "Caractères spéciaux"
+  },
+  "hyphenLabel": {
+    "message": "Traits d’union"
+  },
+  "hyphenHint": {
+    "message": "Trois groupes, deux séparateurs"
+  },
+  "morePasswords": {
+    "message": "5 autres mots de passe"
+  },
+  "refreshAlternatives": {
+    "message": "Générer cinq nouvelles propositions"
+  },
+  "copyAlternative": {
+    "message": "Copier la proposition $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "insertAlternative": {
+    "message": "Insérer la proposition $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "parametersSaved": {
+    "message": "Les options sont enregistrées automatiquement."
+  },
+  "parametersUpdated": {
+    "message": "Options enregistrées. Mots de passe actualisés."
+  },
+  "newPasswordReady": {
+    "message": "Nouveau mot de passe prêt."
+  },
+  "alternativesReady": {
+    "message": "Cinq nouvelles propositions sont prêtes."
+  },
+  "clipboardError": {
+    "message": "Impossible de copier le mot de passe. Réessayez."
+  },
+  "copied": {
+    "message": "Mot de passe copié."
+  },
+  "inserted": {
+    "message": "Mot de passe inséré."
+  },
+  "copyHistoryFailed": {
+    "message": "Mot de passe copié, mais non enregistré dans l’historique."
+  },
+  "insertHistoryFailed": {
+    "message": "Mot de passe inséré, mais non enregistré dans l’historique."
+  },
+  "preferencesSaveFailed": {
+    "message": "Impossible d’enregistrer les options. Modifiez-les à nouveau pour réessayer."
+  },
+  "preferencesLoadFailed": {
+    "message": "Impossible de charger les options. Les valeurs par défaut sont utilisées."
+  },
+  "invalidLength": {
+    "message": "Saisissez un nombre entier de 8 à 64."
+  },
+  "historyTitle": {
+    "message": "Historique"
+  },
+  "historyDescription": {
+    "message": "Uniquement les mots de passe utilisés. Conservation : $DURATION$.",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableDescription": {
+    "message": "Impossible d’ouvrir l’historique."
+  },
+  "historyEmpty": {
+    "message": "Aucune entrée pour le moment"
+  },
+  "historyCopy": {
+    "message": "Copier un mot de passe de l’historique"
+  },
+  "actionCopied": {
+    "message": "Copié"
+  },
+  "actionInserted": {
+    "message": "Inséré"
+  },
+  "clearHistoryButton": {
+    "message": "Effacer l’historique…"
+  },
+  "settingsTitle": {
+    "message": "Réglages"
+  },
+  "settingsDescription": {
+    "message": "Les mots de passe sont ajoutés à l’historique après une copie ou une insertion."
+  },
+  "retentionLabel": {
+    "message": "Conserver les entrées"
+  },
+  "retentionOff": {
+    "message": "Ne pas enregistrer"
+  },
+  "historyOff": {
+    "message": "Désactivé"
+  },
+  "retentionOneDay": {
+    "message": "1 jour"
+  },
+  "retentionDays": {
+    "message": "$COUNT$ jours",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
+  },
+  "retentionExplanation": {
+    "message": "Le délai s’applique à toutes les entrées à partir de l’utilisation du mot de passe. Les entrées expirées sont supprimées au prochain accès à l’historique."
+  },
+  "privacyExplanation": {
+    "message": "L’historique est stocké localement dans le trousseau sécurisé de macOS. Les mots de passe non utilisés ne sont pas enregistrés."
+  },
+  "hyphenExplanation": {
+    "message": "La longueur inclut les traits d’union. Lorsque cette option est activée, deux traits d’union séparent le mot de passe en trois groupes."
+  },
+  "disableHistoryTitle": {
+    "message": "Désactiver l’historique ?"
+  },
+  "clearHistoryTitle": {
+    "message": "Effacer l’historique ?"
+  },
+  "clearConfirmation": {
+    "message": "Tous les mots de passe enregistrés pour ce profil seront supprimés définitivement."
+  },
+  "disableConfirmation": {
+    "message": "Tous les mots de passe enregistrés pour ce profil seront supprimés définitivement. Les nouveaux mots de passe ne seront plus enregistrés."
+  },
+  "cancel": {
+    "message": "Annuler"
+  },
+  "deleteAndDisable": {
+    "message": "Supprimer et désactiver"
+  },
+  "deleteHistory": {
+    "message": "Supprimer l’historique"
+  },
+  "historyDisabled": {
+    "message": "L’historique est désactivé."
+  },
+  "historyCleared": {
+    "message": "Historique effacé."
+  },
+  "retentionChanged": {
+    "message": "Délai de conservation modifié."
+  },
+  "historyFooter": {
+    "message": "Historique : $DURATION$",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableFooter": {
+    "message": "Historique indisponible"
+  },
+  "usedPasswordsOnly": {
+    "message": "Mots de passe utilisés uniquement"
+  },
+  "error_privateMode": {
+    "message": "L’historique et l’insertion ne sont pas disponibles dans les fenêtres privées. Vous pouvez toujours générer et copier des mots de passe."
+  },
+  "error_nativeUnavailable": {
+    "message": "Impossible d’ouvrir l’historique sécurisé. Rouvrez QuietPass dans Safari et réessayez."
+  },
+  "error_storageUnavailable": {
+    "message": "L’historique sécurisé est indisponible. Vérifiez que le trousseau macOS est déverrouillé."
+  },
+  "error_noTab": {
+    "message": "Aucun onglet Safari actif."
+  },
+  "error_noField": {
+    "message": "Sélectionnez un champ de texte sur la page, puis rouvrez QuietPass."
+  },
+  "error_ambiguousField": {
+    "message": "Impossible d’identifier un seul champ. Utilisez plutôt la copie."
+  },
+  "error_pageUnavailable": {
+    "message": "Safari n’a pas autorisé l’accès à cette page. Autorisez l’extension sur ce site ou utilisez la copie."
+  },
+  "error_fieldChanged": {
+    "message": "Le champ sélectionné a changé ou n’a pas accepté le mot de passe. Sélectionnez-le à nouveau."
+  },
+  "error_invalidRequest": {
+    "message": "Impossible d’effectuer l’action. Fermez puis rouvrez QuietPass."
+  },
+  "error_confirmationRequired": {
+    "message": "Confirmez la suppression de l’historique."
+  },
+  "error_generic": {
+    "message": "Impossible d’effectuer l’action. Réessayez."
+  }
+}

@@ -9,15 +9,18 @@ settings:
     DEVELOPMENT_TEAM: 4C524G83X7
     CODE_SIGN_STYLE: Automatic
     CODE_SIGN_IDENTITY: Apple Development
-    MARKETING_VERSION: 1.0.0
-    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 1.1.0
+    CURRENT_PROJECT_VERSION: 2
     ENABLE_HARDENED_RUNTIME: YES
     COMBINE_HIDPI_IMAGES: YES
 targets:
   QuietPass:
     type: application
     platform: macOS
-    sources: [App]
+    sources:
+      - path: App
+      - path: Shared
+        buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.borzov.QuietPass
@@ -30,7 +33,8 @@ targets:
         CFBundleName: QuietPass
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
-        CFBundleDevelopmentRegion: ru
+        CFBundleDevelopmentRegion: en
+        LSUIElement: true
         LSApplicationCategoryType: public.app-category.utilities
         NSHumanReadableCopyright: Copyright © 2026 Maksim Borzov
     dependencies:
@@ -42,10 +46,15 @@ targets:
     platform: macOS
     sources:
       - path: Native
+      - path: Shared
+        buildPhase: resources
       - path: Extension/Resources
-        excludes: [images]
+        excludes: [images, _locales]
         buildPhase: resources
       - path: Extension/Resources/images
+        type: folder
+        buildPhase: resources
+      - path: Extension/Resources/_locales
         type: folder
         buildPhase: resources
     settings:
@@ -59,7 +68,7 @@ targets:
         CFBundleDisplayName: QuietPass
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
-        CFBundleDevelopmentRegion: ru
+        CFBundleDevelopmentRegion: en
         NSExtension:
           NSExtensionPointIdentifier: com.apple.Safari.web-extension
           NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).NativeHandler

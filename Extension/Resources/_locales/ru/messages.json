@@ -1,0 +1,278 @@
+{
+  "extensionName": {
+    "message": "QuietPass"
+  },
+  "extensionDescription": {
+    "message": "Случайные пароли, вставка в поле и защищённая локальная история."
+  },
+  "loading": {
+    "message": "Генерируем пароли…"
+  },
+  "startupError": {
+    "message": "Не удалось запустить генератор. Закройте и снова откройте QuietPass."
+  },
+  "openHistory": {
+    "message": "Открыть историю"
+  },
+  "openSettings": {
+    "message": "Открыть настройки"
+  },
+  "backToGenerator": {
+    "message": "Вернуться к генератору"
+  },
+  "newPassword": {
+    "message": "Новый пароль"
+  },
+  "newPasswordCaption": {
+    "message": "Новый пароль · $LENGTH$ симв.",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
+  "generateNewPassword": {
+    "message": "Сгенерировать новый пароль"
+  },
+  "copyPassword": {
+    "message": "Скопировать"
+  },
+  "insertPassword": {
+    "message": "Вставить"
+  },
+  "passwordOptions": {
+    "message": "Параметры пароля"
+  },
+  "lengthLabel": {
+    "message": "Длина пароля"
+  },
+  "lengthAccessible": {
+    "message": "Количество символов"
+  },
+  "complexityLabel": {
+    "message": "Сложность"
+  },
+  "complexity_simple": {
+    "message": "Простой"
+  },
+  "complexity_standard": {
+    "message": "Стандартный"
+  },
+  "complexity_complex": {
+    "message": "Сложный"
+  },
+  "specialCharacters": {
+    "message": "Спецсимволы"
+  },
+  "hyphenLabel": {
+    "message": "Дефисы"
+  },
+  "hyphenHint": {
+    "message": "Три группы, два разделителя"
+  },
+  "morePasswords": {
+    "message": "Ещё 5 вариантов"
+  },
+  "refreshAlternatives": {
+    "message": "Обновить пять вариантов"
+  },
+  "copyAlternative": {
+    "message": "Скопировать вариант $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "insertAlternative": {
+    "message": "Вставить вариант $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "parametersSaved": {
+    "message": "Параметры сохраняются автоматически."
+  },
+  "parametersUpdated": {
+    "message": "Параметры сохранены. Пароли обновлены."
+  },
+  "newPasswordReady": {
+    "message": "Новый пароль готов."
+  },
+  "alternativesReady": {
+    "message": "Пять новых вариантов готовы."
+  },
+  "clipboardError": {
+    "message": "Не удалось скопировать пароль. Повторите попытку."
+  },
+  "copied": {
+    "message": "Пароль скопирован."
+  },
+  "inserted": {
+    "message": "Пароль вставлен."
+  },
+  "copyHistoryFailed": {
+    "message": "Пароль скопирован. Сохранить в историю не удалось."
+  },
+  "insertHistoryFailed": {
+    "message": "Пароль вставлен. Сохранить в историю не удалось."
+  },
+  "preferencesSaveFailed": {
+    "message": "Не удалось запомнить параметры. Повторите изменение."
+  },
+  "preferencesLoadFailed": {
+    "message": "Не удалось загрузить параметры. Используются стандартные."
+  },
+  "invalidLength": {
+    "message": "Введите целую длину от 8 до 64 символов."
+  },
+  "historyTitle": {
+    "message": "История"
+  },
+  "historyDescription": {
+    "message": "Только использованные пароли. Срок хранения: $DURATION$.",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableDescription": {
+    "message": "Не удалось открыть историю."
+  },
+  "historyEmpty": {
+    "message": "Записей пока нет"
+  },
+  "historyCopy": {
+    "message": "Скопировать запись истории"
+  },
+  "actionCopied": {
+    "message": "Скопирован"
+  },
+  "actionInserted": {
+    "message": "Вставлен"
+  },
+  "clearHistoryButton": {
+    "message": "Очистить историю…"
+  },
+  "settingsTitle": {
+    "message": "Настройки"
+  },
+  "settingsDescription": {
+    "message": "В историю попадают пароли после копирования или вставки."
+  },
+  "retentionLabel": {
+    "message": "Хранить записи"
+  },
+  "retentionOff": {
+    "message": "Не сохранять"
+  },
+  "historyOff": {
+    "message": "выключена"
+  },
+  "retentionOneDay": {
+    "message": "1 день"
+  },
+  "retentionDays": {
+    "message": "$COUNT$ дней",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
+  },
+  "retentionExplanation": {
+    "message": "Срок применяется ко всем записям со дня их использования. Просроченные записи удаляются при следующем обращении к истории."
+  },
+  "privacyExplanation": {
+    "message": "История хранится локально в защищённой Связке ключей. Неиспользованные пароли в историю не попадают."
+  },
+  "hyphenExplanation": {
+    "message": "Длина включает дефисы. Если дефис включён, пароль разбивается на три группы."
+  },
+  "disableHistoryTitle": {
+    "message": "Отключить историю?"
+  },
+  "clearHistoryTitle": {
+    "message": "Очистить историю?"
+  },
+  "clearConfirmation": {
+    "message": "Все сохранённые пароли этого профиля будут удалены. Восстановить их не получится."
+  },
+  "disableConfirmation": {
+    "message": "Все сохранённые пароли этого профиля будут удалены. Восстановить их не получится. Новые пароли не будут сохраняться."
+  },
+  "cancel": {
+    "message": "Отмена"
+  },
+  "deleteAndDisable": {
+    "message": "Удалить и отключить"
+  },
+  "deleteHistory": {
+    "message": "Удалить историю"
+  },
+  "historyDisabled": {
+    "message": "История отключена."
+  },
+  "historyCleared": {
+    "message": "История очищена."
+  },
+  "retentionChanged": {
+    "message": "Срок хранения изменён."
+  },
+  "historyFooter": {
+    "message": "История: $DURATION$",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableFooter": {
+    "message": "История недоступна"
+  },
+  "usedPasswordsOnly": {
+    "message": "Только использованные пароли"
+  },
+  "error_privateMode": {
+    "message": "В приватном окне история и вставка недоступны. Можно сгенерировать и скопировать пароль."
+  },
+  "error_nativeUnavailable": {
+    "message": "Не удалось открыть защищённую историю. Снова откройте QuietPass в Safari и повторите попытку."
+  },
+  "error_storageUnavailable": {
+    "message": "Защищённая история недоступна. Проверьте, что Связка ключей разблокирована."
+  },
+  "error_noTab": {
+    "message": "Нет активной вкладки Safari."
+  },
+  "error_noField": {
+    "message": "Выберите текстовое поле на странице и снова откройте QuietPass."
+  },
+  "error_ambiguousField": {
+    "message": "Не удалось однозначно определить поле. Используйте копирование."
+  },
+  "error_pageUnavailable": {
+    "message": "Safari не разрешил доступ к странице. Разрешите доступ расширению к этому сайту или используйте копирование."
+  },
+  "error_fieldChanged": {
+    "message": "Выбранное поле изменилось или не приняло значение. Выберите его ещё раз."
+  },
+  "error_invalidRequest": {
+    "message": "Не удалось выполнить действие. Закройте и снова откройте QuietPass."
+  },
+  "error_confirmationRequired": {
+    "message": "Для удаления истории требуется подтверждение."
+  },
+  "error_generic": {
+    "message": "Не удалось выполнить действие. Повторите попытку."
+  }
+}

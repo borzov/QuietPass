@@ -1,0 +1,278 @@
+{
+  "extensionName": {
+    "message": "QuietPass"
+  },
+  "extensionDescription": {
+    "message": "Zufällige Passwörter, Einfügen in Felder und ein geschützter lokaler Verlauf."
+  },
+  "loading": {
+    "message": "Passwörter werden erstellt…"
+  },
+  "startupError": {
+    "message": "Der Generator konnte nicht gestartet werden. Schließen Sie QuietPass und öffnen Sie es erneut."
+  },
+  "openHistory": {
+    "message": "Verlauf öffnen"
+  },
+  "openSettings": {
+    "message": "Einstellungen öffnen"
+  },
+  "backToGenerator": {
+    "message": "Zurück zum Generator"
+  },
+  "newPassword": {
+    "message": "Neues Passwort"
+  },
+  "newPasswordCaption": {
+    "message": "Neues Passwort · $LENGTH$ Zeichen",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
+  "generateNewPassword": {
+    "message": "Neues Passwort erstellen"
+  },
+  "copyPassword": {
+    "message": "Kopieren"
+  },
+  "insertPassword": {
+    "message": "Einfügen"
+  },
+  "passwordOptions": {
+    "message": "Passwortoptionen"
+  },
+  "lengthLabel": {
+    "message": "Passwortlänge"
+  },
+  "lengthAccessible": {
+    "message": "Anzahl der Zeichen"
+  },
+  "complexityLabel": {
+    "message": "Komplexität"
+  },
+  "complexity_simple": {
+    "message": "Einfach"
+  },
+  "complexity_standard": {
+    "message": "Standard"
+  },
+  "complexity_complex": {
+    "message": "Komplex"
+  },
+  "specialCharacters": {
+    "message": "Sonderzeichen"
+  },
+  "hyphenLabel": {
+    "message": "Bindestriche"
+  },
+  "hyphenHint": {
+    "message": "Drei Gruppen, zwei Trennzeichen"
+  },
+  "morePasswords": {
+    "message": "5 weitere Passwörter"
+  },
+  "refreshAlternatives": {
+    "message": "Fünf neue Alternativen erstellen"
+  },
+  "copyAlternative": {
+    "message": "Alternative $NUMBER$ kopieren",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "insertAlternative": {
+    "message": "Alternative $NUMBER$ einfügen",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "parametersSaved": {
+    "message": "Optionen werden automatisch gespeichert."
+  },
+  "parametersUpdated": {
+    "message": "Optionen gespeichert. Passwörter aktualisiert."
+  },
+  "newPasswordReady": {
+    "message": "Neues Passwort erstellt."
+  },
+  "alternativesReady": {
+    "message": "Fünf neue Alternativen erstellt."
+  },
+  "clipboardError": {
+    "message": "Das Passwort konnte nicht kopiert werden. Versuchen Sie es erneut."
+  },
+  "copied": {
+    "message": "Passwort kopiert."
+  },
+  "inserted": {
+    "message": "Passwort eingefügt."
+  },
+  "copyHistoryFailed": {
+    "message": "Passwort kopiert, aber nicht im Verlauf gespeichert."
+  },
+  "insertHistoryFailed": {
+    "message": "Passwort eingefügt, aber nicht im Verlauf gespeichert."
+  },
+  "preferencesSaveFailed": {
+    "message": "Die Optionen konnten nicht gespeichert werden. Ändern Sie sie erneut, um es noch einmal zu versuchen."
+  },
+  "preferencesLoadFailed": {
+    "message": "Die Optionen konnten nicht geladen werden. Standardwerte werden verwendet."
+  },
+  "invalidLength": {
+    "message": "Geben Sie eine ganze Zahl zwischen 8 und 64 ein."
+  },
+  "historyTitle": {
+    "message": "Verlauf"
+  },
+  "historyDescription": {
+    "message": "Nur verwendete Passwörter. Aufbewahrungsdauer: $DURATION$.",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableDescription": {
+    "message": "Der Verlauf konnte nicht geöffnet werden."
+  },
+  "historyEmpty": {
+    "message": "Noch keine Einträge"
+  },
+  "historyCopy": {
+    "message": "Passwort aus dem Verlauf kopieren"
+  },
+  "actionCopied": {
+    "message": "Kopiert"
+  },
+  "actionInserted": {
+    "message": "Eingefügt"
+  },
+  "clearHistoryButton": {
+    "message": "Verlauf löschen…"
+  },
+  "settingsTitle": {
+    "message": "Einstellungen"
+  },
+  "settingsDescription": {
+    "message": "Passwörter werden nach dem Kopieren oder Einfügen im Verlauf gespeichert."
+  },
+  "retentionLabel": {
+    "message": "Einträge behalten"
+  },
+  "retentionOff": {
+    "message": "Nicht speichern"
+  },
+  "historyOff": {
+    "message": "Aus"
+  },
+  "retentionOneDay": {
+    "message": "1 Tag"
+  },
+  "retentionDays": {
+    "message": "$COUNT$ Tage",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
+  },
+  "retentionExplanation": {
+    "message": "Die Frist gilt für alle Einträge ab der Verwendung des jeweiligen Passworts. Abgelaufene Einträge werden beim nächsten Zugriff auf den Verlauf gelöscht."
+  },
+  "privacyExplanation": {
+    "message": "Der Verlauf wird lokal im geschützten macOS-Schlüsselbund gespeichert. Nicht verwendete Passwörter werden nicht erfasst."
+  },
+  "hyphenExplanation": {
+    "message": "Die Länge enthält Bindestriche. Wenn aktiviert, teilen zwei Bindestriche das Passwort in drei Gruppen."
+  },
+  "disableHistoryTitle": {
+    "message": "Verlauf deaktivieren?"
+  },
+  "clearHistoryTitle": {
+    "message": "Verlauf löschen?"
+  },
+  "clearConfirmation": {
+    "message": "Alle gespeicherten Passwörter dieses Profils werden unwiderruflich gelöscht."
+  },
+  "disableConfirmation": {
+    "message": "Alle gespeicherten Passwörter dieses Profils werden unwiderruflich gelöscht. Neue Passwörter werden nicht mehr gespeichert."
+  },
+  "cancel": {
+    "message": "Abbrechen"
+  },
+  "deleteAndDisable": {
+    "message": "Löschen und deaktivieren"
+  },
+  "deleteHistory": {
+    "message": "Verlauf löschen"
+  },
+  "historyDisabled": {
+    "message": "Der Verlauf ist deaktiviert."
+  },
+  "historyCleared": {
+    "message": "Verlauf gelöscht."
+  },
+  "retentionChanged": {
+    "message": "Aufbewahrungsdauer geändert."
+  },
+  "historyFooter": {
+    "message": "Verlauf: $DURATION$",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableFooter": {
+    "message": "Verlauf nicht verfügbar"
+  },
+  "usedPasswordsOnly": {
+    "message": "Nur verwendete Passwörter"
+  },
+  "error_privateMode": {
+    "message": "Verlauf und Einfügen sind in privaten Fenstern nicht verfügbar. Sie können weiterhin Passwörter erstellen und kopieren."
+  },
+  "error_nativeUnavailable": {
+    "message": "Der geschützte Verlauf konnte nicht geöffnet werden. Öffnen Sie QuietPass in Safari erneut und versuchen Sie es noch einmal."
+  },
+  "error_storageUnavailable": {
+    "message": "Der geschützte Verlauf ist nicht verfügbar. Stellen Sie sicher, dass der macOS-Schlüsselbund entsperrt ist."
+  },
+  "error_noTab": {
+    "message": "Kein aktiver Safari-Tab."
+  },
+  "error_noField": {
+    "message": "Wählen Sie ein Textfeld auf der Seite aus und öffnen Sie QuietPass erneut."
+  },
+  "error_ambiguousField": {
+    "message": "Es konnte kein eindeutiges Feld ermittelt werden. Verwenden Sie stattdessen Kopieren."
+  },
+  "error_pageUnavailable": {
+    "message": "Safari hat den Zugriff auf diese Seite nicht erlaubt. Erlauben Sie die Erweiterung auf dieser Website oder verwenden Sie Kopieren."
+  },
+  "error_fieldChanged": {
+    "message": "Das ausgewählte Feld hat sich geändert oder das Passwort nicht angenommen. Wählen Sie es erneut aus."
+  },
+  "error_invalidRequest": {
+    "message": "Die Aktion konnte nicht ausgeführt werden. Schließen Sie QuietPass und öffnen Sie es erneut."
+  },
+  "error_confirmationRequired": {
+    "message": "Bestätigen Sie das Löschen des Verlaufs."
+  },
+  "error_generic": {
+    "message": "Die Aktion konnte nicht ausgeführt werden. Versuchen Sie es erneut."
+  }
+}

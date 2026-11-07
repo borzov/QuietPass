@@ -1,0 +1,278 @@
+{
+  "extensionName": {
+    "message": "QuietPass"
+  },
+  "extensionDescription": {
+    "message": "Random passwords, field insertion, and secure local history."
+  },
+  "loading": {
+    "message": "Generating passwords…"
+  },
+  "startupError": {
+    "message": "Could not start the generator. Close and reopen QuietPass."
+  },
+  "openHistory": {
+    "message": "Open history"
+  },
+  "openSettings": {
+    "message": "Open settings"
+  },
+  "backToGenerator": {
+    "message": "Back to generator"
+  },
+  "newPassword": {
+    "message": "New password"
+  },
+  "newPasswordCaption": {
+    "message": "New password · $LENGTH$ characters",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
+  "generateNewPassword": {
+    "message": "Generate a new password"
+  },
+  "copyPassword": {
+    "message": "Copy"
+  },
+  "insertPassword": {
+    "message": "Insert"
+  },
+  "passwordOptions": {
+    "message": "Password options"
+  },
+  "lengthLabel": {
+    "message": "Password length"
+  },
+  "lengthAccessible": {
+    "message": "Number of characters"
+  },
+  "complexityLabel": {
+    "message": "Complexity"
+  },
+  "complexity_simple": {
+    "message": "Simple"
+  },
+  "complexity_standard": {
+    "message": "Standard"
+  },
+  "complexity_complex": {
+    "message": "Complex"
+  },
+  "specialCharacters": {
+    "message": "Special characters"
+  },
+  "hyphenLabel": {
+    "message": "Hyphens"
+  },
+  "hyphenHint": {
+    "message": "Three groups, two separators"
+  },
+  "morePasswords": {
+    "message": "5 more passwords"
+  },
+  "refreshAlternatives": {
+    "message": "Generate five new alternatives"
+  },
+  "copyAlternative": {
+    "message": "Copy alternative $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "insertAlternative": {
+    "message": "Insert alternative $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "parametersSaved": {
+    "message": "Options are saved automatically."
+  },
+  "parametersUpdated": {
+    "message": "Options saved. Passwords updated."
+  },
+  "newPasswordReady": {
+    "message": "New password ready."
+  },
+  "alternativesReady": {
+    "message": "Five new alternatives are ready."
+  },
+  "clipboardError": {
+    "message": "Could not copy the password. Try again."
+  },
+  "copied": {
+    "message": "Password copied."
+  },
+  "inserted": {
+    "message": "Password inserted."
+  },
+  "copyHistoryFailed": {
+    "message": "Password copied, but it could not be saved to history."
+  },
+  "insertHistoryFailed": {
+    "message": "Password inserted, but it could not be saved to history."
+  },
+  "preferencesSaveFailed": {
+    "message": "Could not save your options. Change them again to retry."
+  },
+  "preferencesLoadFailed": {
+    "message": "Could not load your options. Using defaults."
+  },
+  "invalidLength": {
+    "message": "Enter a whole number from 8 to 64."
+  },
+  "historyTitle": {
+    "message": "History"
+  },
+  "historyDescription": {
+    "message": "Only used passwords. Keep records for $DURATION$.",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableDescription": {
+    "message": "History could not be opened."
+  },
+  "historyEmpty": {
+    "message": "No records yet"
+  },
+  "historyCopy": {
+    "message": "Copy a password from history"
+  },
+  "actionCopied": {
+    "message": "Copied"
+  },
+  "actionInserted": {
+    "message": "Inserted"
+  },
+  "clearHistoryButton": {
+    "message": "Clear history…"
+  },
+  "settingsTitle": {
+    "message": "Settings"
+  },
+  "settingsDescription": {
+    "message": "Passwords are added to history after copying or insertion."
+  },
+  "retentionLabel": {
+    "message": "Keep records"
+  },
+  "retentionOff": {
+    "message": "Do not save"
+  },
+  "historyOff": {
+    "message": "Off"
+  },
+  "retentionOneDay": {
+    "message": "1 day"
+  },
+  "retentionDays": {
+    "message": "$COUNT$ days",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
+  },
+  "retentionExplanation": {
+    "message": "The period applies to all records from the time each password was used. Expired records are deleted the next time history is accessed."
+  },
+  "privacyExplanation": {
+    "message": "History is stored locally in the secure macOS Keychain. Unused passwords are not recorded."
+  },
+  "hyphenExplanation": {
+    "message": "The length includes hyphens. When enabled, two hyphens separate the password into three groups."
+  },
+  "disableHistoryTitle": {
+    "message": "Turn off history?"
+  },
+  "clearHistoryTitle": {
+    "message": "Clear history?"
+  },
+  "clearConfirmation": {
+    "message": "All saved passwords for this profile will be permanently deleted."
+  },
+  "disableConfirmation": {
+    "message": "All saved passwords for this profile will be permanently deleted. New passwords will no longer be saved."
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "deleteAndDisable": {
+    "message": "Delete and turn off"
+  },
+  "deleteHistory": {
+    "message": "Delete history"
+  },
+  "historyDisabled": {
+    "message": "History is off."
+  },
+  "historyCleared": {
+    "message": "History cleared."
+  },
+  "retentionChanged": {
+    "message": "Retention period updated."
+  },
+  "historyFooter": {
+    "message": "History: $DURATION$",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableFooter": {
+    "message": "History unavailable"
+  },
+  "usedPasswordsOnly": {
+    "message": "Only used passwords"
+  },
+  "error_privateMode": {
+    "message": "History and insertion are unavailable in private windows. You can still generate and copy passwords."
+  },
+  "error_nativeUnavailable": {
+    "message": "Could not open secure history. Reopen QuietPass in Safari and try again."
+  },
+  "error_storageUnavailable": {
+    "message": "Secure history is unavailable. Make sure the macOS Keychain is unlocked."
+  },
+  "error_noTab": {
+    "message": "No active Safari tab."
+  },
+  "error_noField": {
+    "message": "Select a text field on the page, then reopen QuietPass."
+  },
+  "error_ambiguousField": {
+    "message": "Could not identify a single field. Use Copy instead."
+  },
+  "error_pageUnavailable": {
+    "message": "Safari did not allow access to this page. Allow the extension on this website or use Copy."
+  },
+  "error_fieldChanged": {
+    "message": "The selected field changed or did not accept the password. Select it again."
+  },
+  "error_invalidRequest": {
+    "message": "Could not complete the action. Close and reopen QuietPass."
+  },
+  "error_confirmationRequired": {
+    "message": "Confirm before deleting history."
+  },
+  "error_generic": {
+    "message": "Could not complete the action. Try again."
+  }
+}

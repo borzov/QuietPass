@@ -4,7 +4,7 @@ import SafariServices
 struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var enabled: Bool?
-    @State private var message = ""
+    @State private var message: String?
     private let extensionIdentifier = "com.borzov.QuietPass.Extension"
 
     var body: some View {
@@ -15,26 +15,30 @@ struct ContentView: View {
                 .accessibilityHidden(true)
             VStack(spacing: 6) {
                 Text("QuietPass").font(.largeTitle.weight(.semibold))
-                Text("Новый пароль — прямо в Safari")
+                Text("onboarding.subtitle")
                     .font(.title3).foregroundStyle(.secondary)
             }
-            Text("Включите расширение в Safari. Затем нажмите значок ключа в панели браузера, чтобы сгенерировать, скопировать или вставить пароль.")
+            Text("onboarding.instructions")
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
-            Label(enabled == true ? "Расширение включено" : enabled == false ? "Расширение пока выключено" : "Проверяем состояние…",
-                  systemImage: enabled == true ? "checkmark.circle" : "puzzlepiece.extension")
-                .font(.callout)
-            Button("Открыть настройки Safari") {
+            Label {
+                Text(LocalizedStringKey(enabled == true ? "onboarding.enabled" : enabled == false ? "onboarding.disabled" : "onboarding.checking"))
+            } icon: {
+                Image(systemName: enabled == true ? "checkmark.circle" : "puzzlepiece.extension")
+            }
+            .font(.callout)
+            Button("onboarding.openSettings") {
                 SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionIdentifier) { error in
                     DispatchQueue.main.async {
-                        message = error == nil ? "" : "Не удалось открыть настройки. В Safari выберите «Настройки → Расширения → QuietPass»."
+                        if error == nil { NSApp.terminate(nil) }
+                        else { message = "onboarding.settingsError" }
                     }
                 }
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
-            Text(message.isEmpty ? "Настройки и история доступны в окне расширения. История хранится локально в Связке ключей." : message)
+            Text(LocalizedStringKey(message ?? "onboarding.privacy"))
                 .font(.footnote).foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)

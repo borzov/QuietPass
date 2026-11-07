@@ -4,7 +4,7 @@ export function validateOptions(options) {
   if (!options || !Number.isInteger(options.length) || options.length < 8 || options.length > 64 ||
       !['simple','standard','complex'].includes(options.complexity) ||
       typeof options.special !== 'boolean' || typeof options.hyphen !== 'boolean') {
-    throw new Error('Укажите длину от 8 до 64 и допустимые параметры пароля.');
+    throw new Error('invalidOptions');
   }
   return {length:options.length, complexity:options.complexity, special:options.special, hyphen:options.hyphen};
 }
@@ -42,7 +42,7 @@ export function generatePassword(options) {
 
 export function generateBatch(options, count = 6, exclude = []) {
   validateOptions(options);
-  if (!Number.isInteger(count) || count < 1 || count > 6) throw new Error('Недопустимый размер набора.');
+  if (!Number.isInteger(count) || count < 1 || count > 6) throw new Error('invalidBatchSize');
   const seen = new Set(exclude), passwords = [];
   while (passwords.length < count) {
     const password = generatePassword(options);

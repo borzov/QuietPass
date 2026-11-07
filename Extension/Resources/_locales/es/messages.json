@@ -1,0 +1,278 @@
+{
+  "extensionName": {
+    "message": "QuietPass"
+  },
+  "extensionDescription": {
+    "message": "Contraseñas aleatorias, inserción en campos e historial local protegido."
+  },
+  "loading": {
+    "message": "Generando contraseñas…"
+  },
+  "startupError": {
+    "message": "No se pudo iniciar el generador. Cierra y vuelve a abrir QuietPass."
+  },
+  "openHistory": {
+    "message": "Abrir historial"
+  },
+  "openSettings": {
+    "message": "Abrir ajustes"
+  },
+  "backToGenerator": {
+    "message": "Volver al generador"
+  },
+  "newPassword": {
+    "message": "Nueva contraseña"
+  },
+  "newPasswordCaption": {
+    "message": "Nueva contraseña · $LENGTH$ caracteres",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
+  "generateNewPassword": {
+    "message": "Generar otra contraseña"
+  },
+  "copyPassword": {
+    "message": "Copiar"
+  },
+  "insertPassword": {
+    "message": "Insertar"
+  },
+  "passwordOptions": {
+    "message": "Opciones de contraseña"
+  },
+  "lengthLabel": {
+    "message": "Longitud de contraseña"
+  },
+  "lengthAccessible": {
+    "message": "Número de caracteres"
+  },
+  "complexityLabel": {
+    "message": "Complejidad"
+  },
+  "complexity_simple": {
+    "message": "Sencilla"
+  },
+  "complexity_standard": {
+    "message": "Estándar"
+  },
+  "complexity_complex": {
+    "message": "Compleja"
+  },
+  "specialCharacters": {
+    "message": "Caracteres especiales"
+  },
+  "hyphenLabel": {
+    "message": "Guiones"
+  },
+  "hyphenHint": {
+    "message": "Tres grupos, dos separadores"
+  },
+  "morePasswords": {
+    "message": "5 contraseñas más"
+  },
+  "refreshAlternatives": {
+    "message": "Generar cinco alternativas nuevas"
+  },
+  "copyAlternative": {
+    "message": "Copiar alternativa $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "insertAlternative": {
+    "message": "Insertar alternativa $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "parametersSaved": {
+    "message": "Las opciones se guardan automáticamente."
+  },
+  "parametersUpdated": {
+    "message": "Opciones guardadas. Contraseñas actualizadas."
+  },
+  "newPasswordReady": {
+    "message": "Nueva contraseña lista."
+  },
+  "alternativesReady": {
+    "message": "Las cinco alternativas nuevas están listas."
+  },
+  "clipboardError": {
+    "message": "No se pudo copiar la contraseña. Inténtalo de nuevo."
+  },
+  "copied": {
+    "message": "Contraseña copiada."
+  },
+  "inserted": {
+    "message": "Contraseña insertada."
+  },
+  "copyHistoryFailed": {
+    "message": "Contraseña copiada, pero no se pudo guardar en el historial."
+  },
+  "insertHistoryFailed": {
+    "message": "Contraseña insertada, pero no se pudo guardar en el historial."
+  },
+  "preferencesSaveFailed": {
+    "message": "No se pudieron guardar las opciones. Vuelve a cambiarlas para reintentarlo."
+  },
+  "preferencesLoadFailed": {
+    "message": "No se pudieron cargar las opciones. Se usan los valores predeterminados."
+  },
+  "invalidLength": {
+    "message": "Introduce un número entero del 8 al 64."
+  },
+  "historyTitle": {
+    "message": "Historial"
+  },
+  "historyDescription": {
+    "message": "Solo contraseñas utilizadas. Plazo de conservación: $DURATION$.",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableDescription": {
+    "message": "No se pudo abrir el historial."
+  },
+  "historyEmpty": {
+    "message": "Todavía no hay registros"
+  },
+  "historyCopy": {
+    "message": "Copiar una contraseña del historial"
+  },
+  "actionCopied": {
+    "message": "Copiada"
+  },
+  "actionInserted": {
+    "message": "Insertada"
+  },
+  "clearHistoryButton": {
+    "message": "Borrar historial…"
+  },
+  "settingsTitle": {
+    "message": "Ajustes"
+  },
+  "settingsDescription": {
+    "message": "Las contraseñas se añaden al historial después de copiarlas o insertarlas."
+  },
+  "retentionLabel": {
+    "message": "Conservar registros"
+  },
+  "retentionOff": {
+    "message": "No guardar"
+  },
+  "historyOff": {
+    "message": "Desactivado"
+  },
+  "retentionOneDay": {
+    "message": "1 día"
+  },
+  "retentionDays": {
+    "message": "$COUNT$ días",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
+  },
+  "retentionExplanation": {
+    "message": "El plazo se aplica a todos los registros desde el momento de uso de cada contraseña. Los registros caducados se eliminan la próxima vez que se accede al historial."
+  },
+  "privacyExplanation": {
+    "message": "El historial se guarda localmente en el Llavero seguro de macOS. Las contraseñas no utilizadas no se registran."
+  },
+  "hyphenExplanation": {
+    "message": "La longitud incluye los guiones. Al activar la opción, dos guiones dividen la contraseña en tres grupos."
+  },
+  "disableHistoryTitle": {
+    "message": "¿Desactivar el historial?"
+  },
+  "clearHistoryTitle": {
+    "message": "¿Borrar el historial?"
+  },
+  "clearConfirmation": {
+    "message": "Todas las contraseñas guardadas de este perfil se eliminarán de forma permanente."
+  },
+  "disableConfirmation": {
+    "message": "Todas las contraseñas guardadas de este perfil se eliminarán de forma permanente. Las nuevas contraseñas dejarán de guardarse."
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "deleteAndDisable": {
+    "message": "Borrar y desactivar"
+  },
+  "deleteHistory": {
+    "message": "Borrar historial"
+  },
+  "historyDisabled": {
+    "message": "El historial está desactivado."
+  },
+  "historyCleared": {
+    "message": "Historial borrado."
+  },
+  "retentionChanged": {
+    "message": "Plazo de conservación actualizado."
+  },
+  "historyFooter": {
+    "message": "Historial: $DURATION$",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableFooter": {
+    "message": "Historial no disponible"
+  },
+  "usedPasswordsOnly": {
+    "message": "Solo contraseñas utilizadas"
+  },
+  "error_privateMode": {
+    "message": "El historial y la inserción no están disponibles en ventanas privadas. Puedes seguir generando y copiando contraseñas."
+  },
+  "error_nativeUnavailable": {
+    "message": "No se pudo abrir el historial protegido. Vuelve a abrir QuietPass en Safari e inténtalo de nuevo."
+  },
+  "error_storageUnavailable": {
+    "message": "El historial protegido no está disponible. Comprueba que el Llavero de macOS esté desbloqueado."
+  },
+  "error_noTab": {
+    "message": "No hay ninguna pestaña activa de Safari."
+  },
+  "error_noField": {
+    "message": "Selecciona un campo de texto en la página y vuelve a abrir QuietPass."
+  },
+  "error_ambiguousField": {
+    "message": "No se pudo identificar un único campo. Utiliza la opción de copiar."
+  },
+  "error_pageUnavailable": {
+    "message": "Safari no permitió el acceso a esta página. Autoriza la extensión en este sitio o utiliza la opción de copiar."
+  },
+  "error_fieldChanged": {
+    "message": "El campo seleccionado cambió o no aceptó la contraseña. Selecciónalo de nuevo."
+  },
+  "error_invalidRequest": {
+    "message": "No se pudo completar la acción. Cierra y vuelve a abrir QuietPass."
+  },
+  "error_confirmationRequired": {
+    "message": "Confirma antes de borrar el historial."
+  },
+  "error_generic": {
+    "message": "No se pudo completar la acción. Inténtalo de nuevo."
+  }
+}

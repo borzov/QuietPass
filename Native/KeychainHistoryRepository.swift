@@ -39,7 +39,7 @@ final class KeychainHistoryRepository: HistoryRepository {
     func add(_ entry: HistoryEntry, profile: String) throws {
         var item = query(profile: profile)
         item[kSecAttrAccount as String] = entry.id.uuidString
-        item[kSecAttrLabel as String] = "QuietPass — история паролей"
+        item[kSecAttrLabel as String] = String(localized: "history.keychainLabel")
         item[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
         item[kSecValueData as String] = try JSONEncoder().encode(entry)
         guard SecItemAdd(item as CFDictionary, nil) == errSecSuccess else { throw HistoryStoreError.storageUnavailable }

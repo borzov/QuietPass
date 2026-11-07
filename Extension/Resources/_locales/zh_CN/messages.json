@@ -1,0 +1,278 @@
+{
+  "extensionName": {
+    "message": "QuietPass"
+  },
+  "extensionDescription": {
+    "message": "生成随机密码、填入输入框，并安全地保存在本地历史记录中。"
+  },
+  "loading": {
+    "message": "正在生成密码…"
+  },
+  "startupError": {
+    "message": "无法启动密码生成器。请关闭并重新打开 QuietPass。"
+  },
+  "openHistory": {
+    "message": "打开历史记录"
+  },
+  "openSettings": {
+    "message": "打开设置"
+  },
+  "backToGenerator": {
+    "message": "返回生成器"
+  },
+  "newPassword": {
+    "message": "新密码"
+  },
+  "newPasswordCaption": {
+    "message": "新密码 · $LENGTH$ 个字符",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
+  "generateNewPassword": {
+    "message": "生成新密码"
+  },
+  "copyPassword": {
+    "message": "复制"
+  },
+  "insertPassword": {
+    "message": "填入"
+  },
+  "passwordOptions": {
+    "message": "密码选项"
+  },
+  "lengthLabel": {
+    "message": "密码长度"
+  },
+  "lengthAccessible": {
+    "message": "字符数"
+  },
+  "complexityLabel": {
+    "message": "复杂度"
+  },
+  "complexity_simple": {
+    "message": "简单"
+  },
+  "complexity_standard": {
+    "message": "标准"
+  },
+  "complexity_complex": {
+    "message": "复杂"
+  },
+  "specialCharacters": {
+    "message": "特殊字符"
+  },
+  "hyphenLabel": {
+    "message": "连字符"
+  },
+  "hyphenHint": {
+    "message": "三组字符，两个分隔符"
+  },
+  "morePasswords": {
+    "message": "另外 5 个密码"
+  },
+  "refreshAlternatives": {
+    "message": "重新生成五个备选密码"
+  },
+  "copyAlternative": {
+    "message": "复制备选密码 $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "insertAlternative": {
+    "message": "填入备选密码 $NUMBER$",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "parametersSaved": {
+    "message": "选项会自动保存。"
+  },
+  "parametersUpdated": {
+    "message": "选项已保存，密码已更新。"
+  },
+  "newPasswordReady": {
+    "message": "新密码已生成。"
+  },
+  "alternativesReady": {
+    "message": "五个新备选密码已生成。"
+  },
+  "clipboardError": {
+    "message": "无法复制密码，请重试。"
+  },
+  "copied": {
+    "message": "密码已复制。"
+  },
+  "inserted": {
+    "message": "密码已填入。"
+  },
+  "copyHistoryFailed": {
+    "message": "密码已复制，但无法保存到历史记录。"
+  },
+  "insertHistoryFailed": {
+    "message": "密码已填入，但无法保存到历史记录。"
+  },
+  "preferencesSaveFailed": {
+    "message": "无法保存选项，请重新更改后再试。"
+  },
+  "preferencesLoadFailed": {
+    "message": "无法加载选项，已使用默认设置。"
+  },
+  "invalidLength": {
+    "message": "请输入 8 到 64 之间的整数。"
+  },
+  "historyTitle": {
+    "message": "历史记录"
+  },
+  "historyDescription": {
+    "message": "仅保留已使用的密码。保留期限：$DURATION$。",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableDescription": {
+    "message": "无法打开历史记录。"
+  },
+  "historyEmpty": {
+    "message": "暂无记录"
+  },
+  "historyCopy": {
+    "message": "复制历史记录中的密码"
+  },
+  "actionCopied": {
+    "message": "已复制"
+  },
+  "actionInserted": {
+    "message": "已填入"
+  },
+  "clearHistoryButton": {
+    "message": "清除历史记录…"
+  },
+  "settingsTitle": {
+    "message": "设置"
+  },
+  "settingsDescription": {
+    "message": "复制或填入密码后，密码才会添加到历史记录。"
+  },
+  "retentionLabel": {
+    "message": "保留记录"
+  },
+  "retentionOff": {
+    "message": "不保存"
+  },
+  "historyOff": {
+    "message": "已关闭"
+  },
+  "retentionOneDay": {
+    "message": "1 天"
+  },
+  "retentionDays": {
+    "message": "$COUNT$ 天",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
+  },
+  "retentionExplanation": {
+    "message": "保留期限从每个密码的使用时间开始计算，适用于所有记录。下次访问历史记录时会删除已过期的记录。"
+  },
+  "privacyExplanation": {
+    "message": "历史记录安全地保存在本地 macOS 钥匙串中。未使用的密码不会保存。"
+  },
+  "hyphenExplanation": {
+    "message": "密码长度包含连字符。启用后，两个连字符会将密码分成三组。"
+  },
+  "disableHistoryTitle": {
+    "message": "关闭历史记录？"
+  },
+  "clearHistoryTitle": {
+    "message": "清除历史记录？"
+  },
+  "clearConfirmation": {
+    "message": "此配置文件中保存的所有密码都将被永久删除。"
+  },
+  "disableConfirmation": {
+    "message": "此配置文件中保存的所有密码都将被永久删除，之后也不再保存新密码。"
+  },
+  "cancel": {
+    "message": "取消"
+  },
+  "deleteAndDisable": {
+    "message": "删除并关闭"
+  },
+  "deleteHistory": {
+    "message": "删除历史记录"
+  },
+  "historyDisabled": {
+    "message": "历史记录已关闭。"
+  },
+  "historyCleared": {
+    "message": "历史记录已清除。"
+  },
+  "retentionChanged": {
+    "message": "保留期限已更新。"
+  },
+  "historyFooter": {
+    "message": "历史记录：$DURATION$",
+    "placeholders": {
+      "duration": {
+        "content": "$1",
+        "example": "7 days"
+      }
+    }
+  },
+  "historyUnavailableFooter": {
+    "message": "历史记录不可用"
+  },
+  "usedPasswordsOnly": {
+    "message": "仅限已使用的密码"
+  },
+  "error_privateMode": {
+    "message": "隐私浏览窗口中无法使用历史记录和自动填入，但仍可生成和复制密码。"
+  },
+  "error_nativeUnavailable": {
+    "message": "无法打开安全历史记录。请在 Safari 中重新打开 QuietPass 后再试。"
+  },
+  "error_storageUnavailable": {
+    "message": "安全历史记录不可用，请确认 macOS 钥匙串已解锁。"
+  },
+  "error_noTab": {
+    "message": "没有活跃的 Safari 标签页。"
+  },
+  "error_noField": {
+    "message": "请先选择网页上的文本输入框，再重新打开 QuietPass。"
+  },
+  "error_ambiguousField": {
+    "message": "无法确定唯一的输入框，请改用复制功能。"
+  },
+  "error_pageUnavailable": {
+    "message": "Safari 不允许访问此网页。请允许扩展访问此网站，或改用复制功能。"
+  },
+  "error_fieldChanged": {
+    "message": "所选输入框已更改或未接受密码，请重新选择。"
+  },
+  "error_invalidRequest": {
+    "message": "无法完成操作。请关闭并重新打开 QuietPass。"
+  },
+  "error_confirmationRequired": {
+    "message": "删除历史记录前需要确认。"
+  },
+  "error_generic": {
+    "message": "无法完成操作，请重试。"
+  }
+}

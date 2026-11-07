@@ -14,11 +14,19 @@ func png(size: Int, toolbar: Bool = false) -> Data {
             NSGradient(starting: NSColor(red: 0.12, green: 0.53, blue: 0.62, alpha: 1), ending: NSColor(red: 0.08, green: 0.34, blue: 0.49, alpha: 1))!.draw(in: shape, angle: -90)
         }
         let color: NSColor = toolbar ? .black : .white
-        let configuration = NSImage.SymbolConfiguration(pointSize: rect.width * (toolbar ? 0.85 : 0.47), weight: .medium)
+        let configuration = NSImage.SymbolConfiguration(pointSize: rect.width * (toolbar ? 0.7 : 0.47), weight: toolbar ? .regular : .medium)
             .applying(NSImage.SymbolConfiguration(paletteColors: [color]))
-        let symbol = NSImage(systemSymbolName: "key.fill", accessibilityDescription: nil)!.withSymbolConfiguration(configuration)!
-        let width = rect.width * (toolbar ? 0.94 : 0.56)
-        let height = width * symbol.size.height / symbol.size.width
+        let symbol = NSImage(systemSymbolName: toolbar ? "key.horizontal" : "key.fill", accessibilityDescription: nil)!.withSymbolConfiguration(configuration)!
+        let width: CGFloat
+        let height: CGFloat
+        if toolbar {
+            let scale = min(rect.width * 0.76 / symbol.size.width, rect.height * 0.76 / symbol.size.height)
+            width = symbol.size.width * scale
+            height = symbol.size.height * scale
+        } else {
+            width = rect.width * 0.56
+            height = width * symbol.size.height / symbol.size.width
+        }
         symbol.draw(in: NSRect(x: (rect.width - width) / 2, y: (rect.height - height) / 2, width: width, height: height))
         return true
     }

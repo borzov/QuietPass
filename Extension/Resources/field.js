@@ -22,12 +22,12 @@ export function fieldOperation({operation, password, token}) {
   delete globalThis[targetKey];
   if (operation !== 'insert' || typeof password !== 'string' || !target ||
       target.token !== token || target.element !== activeField() || !editable(target.element)) {
-    return {ok:false, error:'Поле изменилось. Выберите поле и повторите вставку.'};
+    return {ok:false, error:'fieldChanged'};
   }
   const element = target.element;
   const prototype = element instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
   Object.getOwnPropertyDescriptor(prototype, 'value').set.call(element, password);
   element.dispatchEvent(new InputEvent('input', {bubbles:true, composed:true, inputType:'insertReplacementText', data:password}));
   element.dispatchEvent(new Event('change', {bubbles:true}));
-  return element.value === password ? {ok:true} : {ok:false, error:'Сайт не принял значение. Используйте копирование.'};
+  return element.value === password ? {ok:true} : {ok:false, error:'fieldRejected'};
 }
